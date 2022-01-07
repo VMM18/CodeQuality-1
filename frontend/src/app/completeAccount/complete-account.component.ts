@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { CompleteAccountConfirmPassword } from './complete-account-confirm-password';
+// import { CompleteAccountConfirmPassword } from './complete-account-confirm-password';
 import { take } from 'rxjs/operators';
 import { log } from 'console';
 
@@ -46,12 +46,12 @@ export class CompleteAccountComponent implements OnInit {
         ],
         confirmPassword: ['', Validators.required],
       },
-      {
-        validator: CompleteAccountConfirmPassword(
-          'passwordHash',
-          'confirmPassword'
-        ),
-      }
+      // {
+      //   validator: CompleteAccountConfirmPassword(
+      //     'passwordHash',
+      //     'confirmPassword'
+      //   ),
+      // }
     );
     // this.verifyAuthCodeQuery
     //   .fetch({

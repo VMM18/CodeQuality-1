@@ -16,6 +16,24 @@
                 </li>
             </ul>
         </div>
+        <div class="mt-1 w-25 text-right order-1 order-md-last user-col">
+            <div class="right-sec">
+                <strong>User1</strong>
+                <span class="user-icon">
+                    <img src="assets/images/user-icon.svg" width="40" alt="User" />
+                </span>
+                <a href="javascript:void(0)" class="arrow">
+                    <img src="assets/images/down-arrow.png" width="12" height="8" alt="" />
+                    <ul>
+                        <!-- <li class="black"><a routerLink="/my-account"><img src="assets/images/account.svg" alt="" /> My Account</a> </li> -->
+                        <ng-container *ngIf="authService.loggedIn | async">
+                          <li class="red"><a href="javascript: void(0);" (click)="signOut()"><img src="assets/images/close.svg" alt="" /> Sign Out</a></li>
+                        </ng-container>
+                    </ul>
+                </a>
+            </div>
+    
+        </div>
     </nav>
 </ng-container>
     

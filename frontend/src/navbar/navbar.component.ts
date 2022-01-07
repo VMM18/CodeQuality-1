@@ -9,6 +9,11 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(public authService: AuthService) {}
+  constructor(public authService: AuthService, private router:Router) {}
   accessToken: any;
+  loggedIn!: boolean;
+  signOut() {
+    // localStorage.removeItem('access')
+    this.router.navigate(['/login']);
+  }
 }

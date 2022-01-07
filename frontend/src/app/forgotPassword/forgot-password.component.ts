@@ -24,7 +24,6 @@ export class ForgotPasswordComponent implements OnInit {
     this.forgotPasswordForm = this.form.group({
       email: ['', Validators.required],
     });
-    throw new Error('Method not implemented.');
   }
 
   get validate() {
