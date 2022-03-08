@@ -20,3 +20,6 @@ jobs:
         uses: docker://github/super-linter:latest
     env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ENABLE: JAVASCRIPT
+        ENABLE_LINTER: SPELL-CSPELL
+        FILTER_REGEX_EXCLUDE: (test/.*\.Ts)
